@@ -30,6 +30,15 @@ config commit -m "Add bashrc"
 config push
 ```
 
+## Neovim
+
+- https://www.vineeth.io/posts/neovim-setup
+- https://github.com/VVoruganti/dotfiles
+- https://medium.com/@edominguez.se/so-i-switched-to-neovim-in-2025-163b85aa0935
+- https://github.com/kikedose/dotfiles/tree/main
+- https://github.com/ThePrimeagen/init.lua
+- https://gpanders.com/blog/whats-new-in-neovim-0-11/#lsp
+
 ## References
 
 - https://www.atlassian.com/git/tutorials/dotfiles
