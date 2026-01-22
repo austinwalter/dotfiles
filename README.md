@@ -33,7 +33,22 @@ config checkout
 
 # Hide untracked files from status
 config config --local status.showUntrackedFiles no
+
+# Add the alias to your shell config for persistence
+echo "alias config='/usr/bin/git --git-dir=\$HOME/.cfg/ --work-tree=\$HOME'" >> ~/.zshrc
+source ~/.zshrc
 ```
+
+## Shell Setup
+
+Add this alias to your shell config (`~/.zshrc` or `~/.bashrc`) so the `config` command persists across sessions:
+
+```sh
+# Dotfiles management (bare git repo)
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+```
+
+Then reload your shell with `source ~/.zshrc` (or open a new terminal).
 
 ## Initializing a New Dotfiles Repo
 
@@ -43,7 +58,9 @@ If you're starting fresh and want to track your configs:
 git init --bare $HOME/.cfg
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 config config --local status.showUntrackedFiles no
-echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bashrc
+
+# Add to your shell config
+echo "alias config='/usr/bin/git --git-dir=\$HOME/.cfg/ --work-tree=\$HOME'" >> ~/.zshrc
 ```
 
 ## Daily Usage
